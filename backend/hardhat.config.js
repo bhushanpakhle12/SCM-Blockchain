@@ -1,15 +1,13 @@
 require("@nomiclabs/hardhat-ethers")
-require("@nomiclabs/hardhat-ganache")
 require("dotenv").config()
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.17",
   networks: {
-    // ganache: {
-    //   url: "HTTP://127.0.0.1:7545",
-    //   chainId: "31337",
-    //   accounts: ["4a524a9a1f2ce35f6894300c24a04590e5616072f58a368f971f107bb3108186"]
-    // }
+    ganache: {
+      url: "HTTP://127.0.0.1:7545",
+      accounts: ["819e6393e5916df1f102ee885e2fb71720e72cc230ba53e6bbaabca9f7ed0b03"]
+    }
   }
 };

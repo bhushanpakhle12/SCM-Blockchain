@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .homeContainer {
     background-color: #8f08b1;
@@ -10,14 +9,14 @@
 }
 .bodyText, .h1Body {
     margin: 30px;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 .h1Title {
     margin-top: 15px;
     color: whitesmoke;
     display: flex;
     justify-content: center;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 .h1Body {
     color:whitesmoke;

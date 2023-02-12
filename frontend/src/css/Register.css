@@ -9,6 +9,11 @@
     height: 100%;
 }
 
+.option {
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
 .loginTitle {
     color: aliceblue;
     display: flex;
@@ -17,23 +22,28 @@
     font-family: 'Merriweather Sans', sans-serif;
 }
 
-.loginBtn {
-    margin-top: 15px;
-    margin-left: 70px;
-}
 
-.formCardLogin {
-    margin-top: 20px;
+.formCard {
     margin-bottom: 20px;
-    margin-right: 150px;
-    height: 300px;
+    margin-right: 80px;
+    height: 350px;
     color: rgb(11, 13, 1);
     background-color: rgb(248, 248, 248);
     border-color: rgb(226, 140, 12);
     transition:color 0.5s, border-color 0.5s;
 }
 
-.formCardLogin:hover{
-    color: rgb(214, 14, 14);
+.buttonReg {
+    margin-top: 15px;
+    margin-left: 65px;
+}
+
+.formCard:hover{
+    color: rgb(232, 20, 20);
+    border-color: rgb(232, 204, 20);
+}
+
+.buttonReg :hover{
+    color: rgb(232, 204, 20);
     border-color: rgb(232, 204, 20);
 }

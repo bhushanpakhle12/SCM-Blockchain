@@ -96,7 +96,7 @@ export default function Login() {
                 <Form.Control
                   onChange={handleChange}
                   name="reEnterPassword"
-                  type="cpassword"
+                  type="password"
                   placeholder="Password"
                 />
               </Form.Group>

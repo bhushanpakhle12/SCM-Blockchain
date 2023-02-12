@@ -4,7 +4,18 @@ import React from "react";
 import Lottie from "react-lottie";
 import animationData from "../lotties/addproduct.json";
 
+import "../css/AddProd.css";
+import Form from "react-bootstrap/Form";
+
 function MyVerticallyCenteredModal(props) {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
     <Modal
       {...props}
@@ -13,17 +24,31 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
+        <Lottie options={defaultOptions} height={200} width={200} />{" "}
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label className="addLabel">Product Name</Form.Label>
+            <Form.Control type="name" placeholder="Enter product name.." />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label className="addLabel">Product Description</Form.Label>
+            <Form.Control type="password" placeholder="Enter product desc.." />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label className="addLabel">Product Price</Form.Label>
+            <Form.Control type="password" placeholder="Product Price" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label className="addLabel">Product Quantity</Form.Label>
+            <Form.Control type="password" placeholder="Quantity" />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>

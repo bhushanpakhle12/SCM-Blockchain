@@ -1,3 +1,7 @@
 .addLabel {
     color: black;
 }
+
+.addLabelDate{
+    margin: 0 10px;
+}

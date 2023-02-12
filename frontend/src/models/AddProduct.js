@@ -4,6 +4,9 @@ import React from "react";
 import Lottie from "react-lottie";
 import animationData from "../lotties/addproduct.json";
 
+import Metamask from "./Metamask";
+import { useState } from "react";
+import DatePicker from "react-date-picker";
 import "../css/AddProd.css";
 import Form from "react-bootstrap/Form";
 
@@ -16,6 +19,8 @@ function MyVerticallyCenteredModal(props) {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  const [value, onChange] = useState(new Date());
   return (
     <Modal
       {...props}
@@ -24,6 +29,7 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Header closeButton>
+        <Metamask />
         <Lottie options={defaultOptions} height={200} width={200} />{" "}
       </Modal.Header>
       <Modal.Body>
@@ -35,16 +41,32 @@ function MyVerticallyCenteredModal(props) {
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label className="addLabel">Product Description</Form.Label>
-            <Form.Control type="password" placeholder="Enter product desc.." />
+            <Form.Control type="text" placeholder="Enter product desc.." />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label className="addLabel">Product Price</Form.Label>
-            <Form.Control type="password" placeholder="Product Price" />
+            <Form.Control type="text" placeholder="Product Price" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label className="addLabel">Product Quantity</Form.Label>
-            <Form.Control type="password" placeholder="Quantity" />
+            <Form.Control type="text" placeholder="Quantity" />
           </Form.Group>
+          <div className="dateClass">
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label className="addLabel">Date Manufactured</Form.Label>
+              <DatePicker
+                className="addLabelDate"
+                onChange={onChange}
+                value={value}
+              />
+              <Form.Label className="addLabel">Date of Expiry</Form.Label>
+              <DatePicker
+                className="addLabelDate"
+                onChange={onChange}
+                value={value}
+              />
+            </Form.Group>
+          </div>
           <Button variant="primary" type="submit">
             Submit
           </Button>

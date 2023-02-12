@@ -1,5 +1,5 @@
-require("@nomiclabs/hardhat-ethers")
-require("dotenv").config()
+require("@nomiclabs/hardhat-ethers");
+require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -7,7 +7,9 @@ module.exports = {
   networks: {
     ganache: {
       url: "HTTP://127.0.0.1:7545",
-      accounts: ["c9d1026ef32198e55ebb28d11e77199fd61815ed180cf3fcf59b6a28d0df4c6e"]
-    }
-  }
+      accounts: [
+        "ddf08d7f860763045b4703efc5bf963bf8e61b0482bf7856e109d19ac7f769db",
+      ],
+    },
+  },
 };

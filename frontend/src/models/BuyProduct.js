@@ -15,6 +15,16 @@ function MyVerticallyCenteredModal(props) {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  let quantity;
+
+  // const buyHandler = async () => {
+  //   const provider = new ethers.providers.Web3Provider(window.ethereum);
+  //   const signer = await provider.getSigner();
+  //   let transaction = await dappazon
+  //     .connect(signer)
+  //     .buy(item.id, quantity, { value: item.cost });
+  //   await transaction.wait();
+  // };
   return (
     <Modal
       {...props}

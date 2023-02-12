@@ -3,6 +3,7 @@ import "../css/Home.css";
 import Lottie from "react-lottie";
 import animationData from "../lotties/home.json";
 import NavbarModel from "../models/NavbarModel";
+// import QRCode from "react-qr-code";
 
 export default function Home() {
   const defaultOptions = {
@@ -33,6 +34,21 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div
+        style={{
+          height: "auto",
+          margin: "0 auto",
+          maxWidth: 64,
+          width: "100%",
+        }}
+      >
+        {/* <QRCode
+          size={256}
+          style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+          value="Amey"
+          viewBox={`0 0 256 256`}
+        /> */}
       </div>
     </>
   );

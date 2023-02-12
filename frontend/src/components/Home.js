@@ -22,7 +22,7 @@ export default function Home() {
         <Lottie options={defaultOptions} height={400} width={400} />
 
         <div className="bodyContainer">
-          <h1 className="h1Title">Kahi Pahije Ka ..?</h1>
+          <h1 className="h1Title">Medi-Chain</h1>
           <div className="innerContainer">
             <div className="bodyText">
               <h3 className="h1Body">Bhushan Pakhle</h3>

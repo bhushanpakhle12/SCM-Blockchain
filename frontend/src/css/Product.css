@@ -1,0 +1,31 @@
+.lottie {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+.logout {
+    background-color: aliceblue;
+}
+
+.contactHead {
+    margin-top: 15px;
+    color: aliceblue;
+    /* display: flex;
+    justify-content: center; */
+    margin-left: 46%;
+}
+
+.form-label {
+    color: aliceblue;
+}
+.logout {
+    display: flex;
+    justify-content: center;
+    margin-left: 50%;
+    margin-bottom: 25px;
+}
+.prodButton {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}

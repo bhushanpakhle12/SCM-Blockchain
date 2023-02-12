@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/wesleylewis/Desktop/SCM-Blockchain/backend/contracts/SCM.sol": {
-      "lastModificationDate": 1676160954496,
-      "contentHash": "ffad23b943fdc8ddd79825e2a7386a51",
+      "lastModificationDate": 1676172894672,
+      "contentHash": "c17d3ce9f33b4103a1466bcf7b86a78f",
       "sourceName": "contracts/SCM.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -34,6 +34,43 @@
       ],
       "artifacts": [
         "SCM"
+      ]
+    },
+    "/home/wesleylewis/Desktop/SCM-Blockchain/backend/contracts/WarehouseOwner.sol": {
+      "lastModificationDate": 1676173090833,
+      "contentHash": "55e71bb8f5e06d6bbabdff47fa784301",
+      "sourceName": "contracts/WarehouseOwner.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SCM.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "WarehouseOwner"
       ]
     }
   }

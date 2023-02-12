@@ -15,7 +15,7 @@ contract SCM {
     uint256 batchNo;
     uint256 costOfProduct;
     uint256 quantity;
-    State stateOfProduct; 
+
   }
 
   struct Order {
@@ -23,9 +23,11 @@ contract SCM {
     Product product;
   } 
 
-  struct State {
-    address productOwner;
-    string productLocation;
+
+  struct WarehouseUpdate {
+    address managerInfo;
+    uint256 timeOfDelivery;
+    string details;
   }
 
   modifier onlyOwner() {
@@ -39,6 +41,7 @@ contract SCM {
   mapping(uint256 => Product) public products;
   mapping(address => uint256 ) public orderCount;
   mapping(address => mapping(uint256 => Order)) public orders;
+  mapping(uint256 => WarehouseUpdate) public history;
 
   constructor() {
     owner = msg.sender;
@@ -63,8 +66,7 @@ contract SCM {
       _manufacturingNo,
       _batchNo,
       _costOfProduct,
-      _quantity,
-      State(msg.sender,  "")
+      _quantity
     );
 
     incrementId();
@@ -88,13 +90,8 @@ contract SCM {
     products[_identifier].quantity = products[_identifier].quantity - _quantity;
 
     emit BoughtProduct(products[_identifier].productName, _quantity, msg.sender);
-    
-    return true;
-  }
 
-  function updateLocation(uint256 _identifier, string memory newLocation) public {
-    require(products[_identifier].manufacturer == msg.sender);
-    products[_identifier].stateOfProduct.productLocation = newLocation;
+    return true;
   }
 
   function incrementId() private {
